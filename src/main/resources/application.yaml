@@ -1,0 +1,30 @@
+# Data-Source Settings
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@lqp2dts-scan:1521/DTMICDEV
+    username: ENC(aSEUEQ0fVUCx4Bcwoqp4zA==)
+    password: ENC(aSEUEQ0fVUCx4Bcwoqp4zA==)
+  jpa:
+    hibernate.ddl-auto: validate
+  cache:
+    type: redis
+  redis:
+    host: redis.cds-dev.svc.cluster.local
+    port: 6379
+    password: ENC(v6H8tIkZXUAqTLpR8JqNQVakYRmX/MDF)
+    defaultTTL: 1
+    stream:
+      key:
+        delete: DELETED_BENEFICIARY_STREAM
+    keys:
+      cooling-period: COOLING-PERIOD
+      retail-prefix: RETAIL
+
+scheduler:
+  jobs:
+    cooling-period:
+      time: 1 #in minutes
+      refresh-rate: 30000 #in ms
+
+
+
