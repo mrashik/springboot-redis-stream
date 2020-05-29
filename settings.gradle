@@ -4,5 +4,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'Redis-POC'
+rootProject.name = 'springboot-redis-stream'
 

@@ -1,12 +1,12 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.2.5.RELEASE'
+    id 'org.springframework.boot' version '2.3.0.RELEASE'
 
 }
 
 apply plugin : 'io.spring.dependency-management'
 
-group 'org.example'
+group 'org.mrk.apps'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
